@@ -1,0 +1,112 @@
+body{
+  font-family: sans-serif;
+  background: #2c3e50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #2c3e50;
+  
+}
+.content-wrapper{
+  display: flex;
+  width: 80vw;
+  min-height: 80vh;
+  position: relative;
+}
+input{
+  display: none;
+}
+#section-1, #section-2{
+  display: flex;
+  width: 80vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#section-1{
+  opacity: 1;
+  z-index: 5;
+  transition: transform 0.5s, opacity 0.5s;
+}
+#section-2{
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+.image-container{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+img{
+  flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+.info-container{
+  width: 50%;
+  height: 100%;
+  background: rgb(11, 205, 205);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h3{
+  width: 85%;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+#section-2 .image-container{
+  opacity: 0;
+  transform: translateY(2em);
+  transition: all 1s 0.7s;
+}
+#section-2 .info-container{
+  opacity: 0;
+  transform: translateY(-2em);
+  transition: all 1s 0.7s;
+}
+label{
+  display: block;
+  border: solid 2px #111;
+  padding: 1em 2.5em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+label:hover{
+  border-radius: 30px;
+}
+#toggle1:checked ~ #section-2{
+  opacity: 1;
+}
+#toggle1:checked ~ #section-1{
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+#toggle1:checked ~ #section-2 .image-container,
+#toggle1:checked ~ #section-2 .info-container{
+  opacity: 1;
+  transform: translateY(0);
+}
+#toggle2:checked ~ #section-1{
+  transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
+}
+#toggle2:checked ~ #section-2 .image-container,
+#toggle2:checked ~ #section-2 .info-container{
+  transition: transform 0.5s, opacity 0.5s;
+}

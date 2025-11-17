@@ -1,0 +1,52 @@
+body{
+  font-family: sans-serif;
+  background: #2c3e50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+flex-direction: column;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css");
+
+*{
+	margin: 0;
+	padding: 0;
+}
+.reveal{
+	position: relative;
+	font-size: 6em;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: #2c3e50;
+	color: red;
+	letter-spacing: 0.5em;
+}
+span{
+	color: #2c3e50;
+	mix-blend-mode: lighten;
+}
+.reveal:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150px;
+	height: 100%;
+	border-radius: 50%;
+	background: #111;
+	animation: reveal 10s linear infinite;
+}
+@keyframes reveal{
+	0%{
+		left: -50px;
+	}
+	50%{
+		left: calc(100% - 150px);
+	}
+	100%{
+		left: -50px;
+	}
+}
