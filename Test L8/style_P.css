@@ -1,52 +1,66 @@
-body{
-  font-family: sans-serif;
-  background: #2c3e50;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10vh;
-flex-direction: column;
-}
-
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css");
-
 *{
 	margin: 0;
 	padding: 0;
 }
-.reveal{
-	position: relative;
-	font-size: 6em;
-	font-weight: bold;
-	text-transform: uppercase;
-	background: #2c3e50;
-	color: red;
-	letter-spacing: 0.5em;
+
+header{
+  height: 200vh;
 }
-span{
-	color: #2c3e50;
-	mix-blend-mode: lighten;
+.container{
+  clip: rect(0, auto, auto, 0);
+  overflow: hidden;
+  position: absolute;
+  height: 100vh;
+  left: 0;
+  width: 100%;
 }
-.reveal:before{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 150px;
-	height: 100%;
-	border-radius: 50%;
-	background: #111;
-	animation: reveal 10s linear infinite;
+.container_solid{
+  background: white;
+  top: 0;
 }
-@keyframes reveal{
-	0%{
-		left: -50px;
-	}
-	50%{
-		left: calc(100% - 150px);
-	}
-	100%{
-		left: -50px;
-	}
+.title_wrapper{
+  position: fixed;
+  display: block;
+  margin: auto;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.title_wrapper h1{
+  text-align: center;
+  font-size: 64px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+}
+.container_solid .title_wrapper h1{
+  background: url(https://images.unsplash.com/photo-1575058752200-a9d6c0f41945?&q=85);
+  background-size: 100vw auto;
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: black;
+}
+.container_image{
+  background-image: url(https://images.unsplash.com/photo-1575058752200-a9d6c0f41945?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-size: 100vw auto;
+  background-position: center;
+  background-attachment: fixed;
+  top: 100vh;
+}
+.container_image .title_wrapper h1{
+  color: white;
+}
+section{
+  min-height: 100vh;
+  padding: 2em;
+  margin: auto;
+  max-width: 800px;
+}
+section h2{
+  font-family: 'Fraunces', serif;
 }
