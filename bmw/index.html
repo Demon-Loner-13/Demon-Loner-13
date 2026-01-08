@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW - Plăcerea de a Conduce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-logo">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+                <circle cx="50" cy="50" r="48" fill="none" stroke="#1c69d4" stroke-width="2" class="loader-circle"/>
+                <circle cx="50" cy="50" r="40" fill="#1c69d4"/>
+                <path d="M50 10 L50 50 L90 50 A40 40 0 0 0 50 10" fill="#fff"/>
+                <path d="M50 90 L50 50 L10 50 A40 40 0 0 0 50 90" fill="#fff"/>
+            </svg>
+        </div>
+        <div class="loader-text">Se încarcă...</div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Particles Background -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <svg viewBox="0 0 100 100" width="50" height="50">
+                <circle cx="50" cy="50" r="48" fill="none" stroke="#fff" stroke-width="3"/>
+                <circle cx="50" cy="50" r="40" fill="#1c69d4"/>
+                <path d="M50 10 L50 50 L90 50 A40 40 0 0 0 50 10" fill="#fff"/>
+                <path d="M50 90 L50 50 L10 50 A40 40 0 0 0 50 90" fill="#fff"/>
+            </svg>
+            <span class="logo-text">BMW</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Acasă</a></li>
+            <li><a href="#models" class="nav-link">Modele</a></li>
+            <li><a href="#gallery" class="nav-link">Galerie</a></li>
+            <li><a href="#specs" class="nav-link">Specificații</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=1920')"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <span class="hero-tag" data-aos="fade-down">Noua Eră a Performanței</span>
+            <h1 data-aos="fade-up">
+                <span class="line">Plăcerea</span>
+                <span class="line">de a <span class="highlight">Conduce</span></span>
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="200">Descoperă eleganța supremă și performanța de neegalat</p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                <button class="btn btn-primary magnetic">Explorează Gama</button>
+                <button class="btn btn-outline magnetic">Configurator</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <span>Scroll</span>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-number" data-count="510">0</span>
+                <span class="stat-label">CP Putere</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-count="3.9">0</span>
+                <span class="stat-label">sec 0-100</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-count="630">0</span>
+                <span class="stat-label">km Autonomie</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Models Slideshow -->
+    <section class="slideshow" id="models">
+        <div class="section-header">
+            <span class="section-tag" data-aos="fade-right">Colecția 2024</span>
+            <h2 data-aos="fade-up">Modele <span class="highlight">Iconice</span></h2>
+        </div>
+        <div class="slides-wrapper">
+            <div class="slides-container">
+                <div class="slide active">
+                    <div class="slide-image tilt">
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800" alt="BMW M4">
+                        <div class="slide-image-overlay"></div>
+                    </div>
+                    <div class="slide-content">
+                        <span class="slide-number">01</span>
+                        <span class="slide-tag">Performanță</span>
+                        <h3>BMW M4 Competition</h3>
+                        <p>510 CP de pură adrenalină. Sistemul de tracțiune M xDrive oferă aderență perfectă în orice condiții. Accelerație 0-100 în doar 3.9 secunde.</p>
+                        <ul class="slide-specs">
+                            <li><strong>510</strong> CP</li>
+                            <li><strong>3.9</strong> sec</li>
+                            <li><strong>290</strong> km/h</li>
+                        </ul>
+                        <button class="btn btn-small magnetic">Descoperă</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-image tilt">
+                        <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=800" alt="BMW iX">
+                        <div class="slide-image-overlay"></div>
+                    </div>
+                    <div class="slide-content">
+                        <span class="slide-number">02</span>
+                        <span class="slide-tag">Electric</span>
+                        <h3>BMW iX xDrive50</h3>
+                        <p>Viitorul mobilității electrice este aici. Design revoluționar, tehnologie de vârf și o autonomie impresionantă de până la 630 km.</p>
+                        <ul class="slide-specs">
+                            <li><strong>523</strong> CP</li>
+                            <li><strong>4.6</strong> sec</li>
+                            <li><strong>630</strong> km</li>
+                        </ul>
+                        <button class="btn btn-small magnetic">Descoperă</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-image tilt">
+                        <img src="https://images.unsplash.com/photo-1556189250-72ba954cfc2b?w=800" alt="BMW X7">
+                        <div class="slide-image-overlay"></div>
+                    </div>
+                    <div class="slide-content">
+                        <span class="slide-number">03</span>
+                        <span class="slide-tag">Lux</span>
+                        <h3>BMW X7 M60i</h3>
+                        <p>Eleganță supremă întâlnește performanța. Spațiu generos pentru 7 pasageri și toate dotările premium pe care le poți imagina.</p>
+                        <ul class="slide-specs">
+                            <li><strong>530</strong> CP</li>
+                            <li><strong>4.7</strong> sec</li>
+                            <li><strong>250</strong> km/h</li>
+                        </ul>
+                        <button class="btn btn-small magnetic">Descoperă</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-image tilt">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800" alt="BMW M8">
+                        <div class="slide-image-overlay"></div>
+                    </div>
+                    <div class="slide-content">
+                        <span class="slide-number">04</span>
+                        <span class="slide-tag">Gran Coupe</span>
+                        <h3>BMW M8 Competition</h3>
+                        <p>Coupé-ul suprem. Performanță extremă într-un pachet elegant de 4 uși. Motorul V8 twin-turbo livrează emoții pure.</p>
+                        <ul class="slide-specs">
+                            <li><strong>625</strong> CP</li>
+                            <li><strong>3.2</strong> sec</li>
+                            <li><strong>305</strong> km/h</li>
+                        </ul>
+                        <button class="btn btn-small magnetic">Descoperă</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-image tilt">
+                        <img src="https://images.unsplash.com/photo-1607853554439-0069ec0f29b6?w=800" alt="BMW i7">
+                        <div class="slide-image-overlay"></div>
+                    </div>
+                    <div class="slide-content">
+                        <span class="slide-number">05</span>
+                        <span class="slide-tag">Electric Luxury</span>
+                        <h3>BMW i7 xDrive60</h3>
+                        <p>Limuzina electrică supremă. Theatre Screen de 31", confort de clasă întâi și zero emisii. Viitorul luxului este electric.</p>
+                        <ul class="slide-specs">
+                            <li><strong>544</strong> CP</li>
+                            <li><strong>4.7</strong> sec</li>
+                            <li><strong>625</strong> km</li>
+                        </ul>
+                        <button class="btn btn-small magnetic">Descoperă</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-controls">
+            <button class="control-btn prev-btn magnetic"><span>←</span></button>
+            <div class="slide-progress">
+                <div class="slide-dots"></div>
+                <div class="progress-bar"><div class="progress"></div></div>
+            </div>
+            <button class="control-btn next-btn magnetic"><span>→</span></button>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="section-header">
+            <span class="section-tag" data-aos="fade-right">Galerie Foto</span>
+            <h2 data-aos="fade-up">Momente <span class="highlight">Captivante</span></h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item large" data-aos="fade-up">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800" alt="BMW">
+                <div class="gallery-overlay">
+                    <span class="gallery-icon">+</span>
+                    <span class="gallery-title">M Performance</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?w=600" alt="BMW Interior">
+                <div class="gallery-overlay">
+                    <span class="gallery-icon">+</span>
+                    <span class="gallery-title">Interior Luxos</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1619767886558-efdc259b6e09?w=600" alt="BMW Wheel">
+                <div class="gallery-overlay">
+                    <span class="gallery-icon">+</span>
+                    <span class="gallery-title">Detalii M</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600" alt="BMW Night">
+                <div class="gallery-overlay">
+                    <span class="gallery-icon">+</span>
+                    <span class="gallery-title">Night Vision</span>
+                </div>
+            </div>
+            <div class="gallery-item tall" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600" alt="BMW Classic">
+                <div class="gallery-overlay">
+                    <span class="gallery-icon">+</span>
+                    <span class="gallery-title">Heritage</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" alt="BMW Speed">
+                <div class="gallery-overlay">
+                    <span class="gallery-icon">+</span>
+                    <span class="gallery-title">Pure Speed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox">
+        <button class="lightbox-close">×</button>
+        <button class="lightbox-prev">←</button>
+        <button class="lightbox-next">→</button>
+        <img src="" alt="Gallery Image">
+    </div>
+
+    <!-- Specs Section -->
+    <section class="specs" id="specs">
+        <div class="specs-bg"></div>
+        <div class="section-header">
+            <span class="section-tag" data-aos="fade-right">Tehnologie</span>
+            <h2 data-aos="fade-up">Inovație <span class="highlight">Pură</span></h2>
+        </div>
+        <div class="specs-grid">
+            <div class="spec-card" data-aos="zoom-in">
+                <div class="spec-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                    </svg>
+                </div>
+                <h3>Performanță Extremă</h3>
+                <p>Motoare de ultimă generație cu tehnologie BMW TwinPower Turbo</p>
+                <div class="spec-bar">
+                    <div class="spec-fill" data-width="95"></div>
+                </div>
+            </div>
+            <div class="spec-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="spec-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <h3>Siguranță Avansată</h3>
+                <p>Sisteme inteligente de asistență și protecție a pasagerilor</p>
+                <div class="spec-bar">
+                    <div class="spec-fill" data-width="90"></div>
+                </div>
+            </div>
+            <div class="spec-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="spec-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                </div>
+                <h3>Eficiență Maximă</h3>
+                <p>Consum redus fără compromisuri în performanță</p>
+                <div class="spec-bar">
+                    <div class="spec-fill" data-width="85"></div>
+                </div>
+            </div>
+            <div class="spec-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="spec-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2"/>
+                        <path d="M8 21h8m-4-4v4"/>
+                    </svg>
+                </div>
+                <h3>Conectivitate</h3>
+                <p>BMW iDrive 8.5 cu display curbat și asistent virtual</p>
+                <div class="spec-bar">
+                    <div class="spec-fill" data-width="92"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Marquee -->
+    <div class="marquee">
+        <div class="marquee-content">
+            <span>M POWER</span>
+            <span>•</span>
+            <span>ELECTRIC</span>
+            <span>•</span>
+            <span>INNOVATION</span>
+            <span>•</span>
+            <span>LUXURY</span>
+            <span>•</span>
+            <span>PERFORMANCE</span>
+            <span>•</span>
+            <span>M POWER</span>
+            <span>•</span>
+            <span>ELECTRIC</span>
+            <span>•</span>
+            <span>INNOVATION</span>
+            <span>•</span>
+            <span>LUXURY</span>
+            <span>•</span>
+            <span>PERFORMANCE</span>
+            <span>•</span>
+        </div>
+    </div>
+
+    <!-- Contact/CTA -->
+    <section class="cta-section" id="contact">
+        <div class="cta-content">
+            <h2 data-aos="fade-up">Programează un <span class="highlight">Test Drive</span></h2>
+            <p data-aos="fade-up" data-aos-delay="100">Experimentează plăcerea de a conduce un BMW</p>
+            <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nume" required>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                        <span class="form-line"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Selectează Modelul</option>
+                        <option>BMW M4 Competition</option>
+                        <option>BMW iX xDrive50</option>
+                        <option>BMW X7 M60i</option>
+                        <option>BMW M8 Competition</option>
+                        <option>BMW i7 xDrive60</option>
+                    </select>
+                    <span class="form-line"></span>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large magnetic">
+                    <span>Trimite Cererea</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14m-7-7 7 7-7 7"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+        <div class="cta-image" data-aos="fade-left">
+            <img src="https://images.unsplash.com/photo-1556189250-72ba954cfc2b?w=800" alt="BMW">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <svg viewBox="0 0 100 100" width="60" height="60">
+                    <circle cx="50" cy="50" r="48" fill="none" stroke="#333" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="40" fill="#1c69d4"/>
+                    <path d="M50 10 L50 50 L90 50 A40 40 0 0 0 50 10" fill="#fff"/>
+                    <path d="M50 90 L50 50 L10 50 A40 40 0 0 0 50 90" fill="#fff"/>
+                </svg>
+                <p>Plăcerea de a Conduce</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Modele</a>
+                <a href="#">Servicii</a>
+                <a href="#">Dealer</a>
+                <a href="#">Cariere</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-link magnetic">FB</a>
+                <a href="#" class="social-link magnetic">IG</a>
+                <a href="#" class="social-link magnetic">YT</a>
+                <a href="#" class="social-link magnetic">TW</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 BMW Group. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top magnetic">↑</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
